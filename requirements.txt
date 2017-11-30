@@ -22,3 +22,4 @@ pipdeptree==0.10.1
   - pip [required: >=6.0.0, installed: 9.0.1]
 setuptools==38.2.3
 wheel==0.30.0
+gunicorn
