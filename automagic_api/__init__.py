@@ -10,7 +10,7 @@ from sqlalchemy import *
 # pp = pprint
 
 app = flask.Flask(__name__)
-app.config['sqlite:///foobar.db'] = os.environ['postgresql-graceful-65432']
+app.config['sqlite:///foobar.db'] = os.environ['https://bright-core.herokuapp.com/api/policy']
 db = SQLAlchemy(app)
 cors = CORS(app)
 
