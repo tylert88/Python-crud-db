@@ -9,7 +9,7 @@ from sqlalchemy import *
 # pp = pprint
 
 app = flask.Flask(__name__)
-app.config['Ssqlite:///foobar.db'] = os.environ['postgresql-graceful-65432']
+app.config['sqlite:///foobar.db'] = os.environ['postgresql-graceful-65432']
 db = SQLAlchemy(app)
 cors = CORS(app)
 
