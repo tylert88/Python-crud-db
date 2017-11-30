@@ -1,0 +1,24 @@
+Flask-Cors==3.0.3
+  - Flask [required: >=0.9, installed: 0.12.2]
+    - click [required: >=2.0, installed: 6.7]
+    - itsdangerous [required: >=0.21, installed: 0.24]
+    - Jinja2 [required: >=2.4, installed: 2.10]
+      - MarkupSafe [required: >=0.23, installed: 1.0]
+    - Werkzeug [required: >=0.7, installed: 0.12.2]
+  - Six [required: Any, installed: 1.11.0]
+Flask-Restless==0.17.0
+  - flask [required: >=0.10, installed: 0.12.2]
+    - click [required: >=2.0, installed: 6.7]
+    - itsdangerous [required: >=0.21, installed: 0.24]
+    - Jinja2 [required: >=2.4, installed: 2.10]
+      - MarkupSafe [required: >=0.23, installed: 1.0]
+    - Werkzeug [required: >=0.7, installed: 0.12.2]
+  - mimerender [required: >=0.5.2, installed: 0.6.0]
+    - python-mimeparse [required: >=0.1.4, installed: 1.6.0]
+  - python-dateutil [required: >2.0, installed: 2.6.1]
+    - six [required: >=1.5, installed: 1.11.0]
+  - sqlalchemy [required: >=0.8, installed: 1.1.15]
+pipdeptree==0.10.1
+  - pip [required: >=6.0.0, installed: 9.0.1]
+setuptools==38.2.3
+wheel==0.30.0
