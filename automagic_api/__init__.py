@@ -11,8 +11,9 @@ from flask.ext.heroku import Heroku
 # pp = pprint
 
 app = flask.Flask(__name__)
-cors = CORS(app)
 heroku = Heroku(app)
+cors = CORS(app)
+
 
 # Create our SQLAlchemy DB engine
 engine = create_engine('sqlite:///foobar.db')
