@@ -1,3 +1,4 @@
+import os
 import flask
 from flask_cors import CORS
 import flask_restless
