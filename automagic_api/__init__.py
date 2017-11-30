@@ -1,18 +1,18 @@
-import os
+
 import flask
 from flask_cors import CORS
 import flask_restless
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import *
+from flask.ext.heroku import Heroku
 # from sqlalchemy import event
 # import pprint
 # pp = pprint
 
 app = flask.Flask(__name__)
-app.config['sqlite:///foobar.db'] = os.environ['https://bright-core.herokuapp.com']
-db = SQLAlchemy(app)
 cors = CORS(app)
+heroku = Heroku(app)
 
 # Create our SQLAlchemy DB engine
 engine = create_engine('sqlite:///foobar.db')
