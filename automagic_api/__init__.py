@@ -1,7 +1,7 @@
 
 import flask
-from flask_cors import CORS
 import flask_restless
+from flask_cors import CORS
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import *
