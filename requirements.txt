@@ -24,3 +24,4 @@ setuptools==38.2.3
 wheel==0.30.0
 gunicorn
 flask-heroku
+io
