@@ -5,16 +5,14 @@ from flask_cors import CORS
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import *
-from flask.ext.heroku import Heroku
-# from sqlalchemy import event
-# import pprint
-# pp = pprint
+from flask_heroku import Heroku
+
 
 app = flask.Flask(__name__)
 heroku = Heroku(app)
 cors = CORS(app)
 
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 # Create our SQLAlchemy DB engine
 engine = create_engine('sqlite:///foobar.db')
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
@@ -33,10 +31,3 @@ manager = flask_restless.APIManager(app, session=s)
 from .controllers import features_api_blueprint, policy_api_blueprint
 app.register_blueprint(policy_api_blueprint)
 app.register_blueprint(features_api_blueprint)
-
-
-# # standard decorator style
-# @event.listens_for(engine, 'handle_error')
-# def receive_handle_error(exception_context):
-#     "listen for the 'handle_error' event"
-#     print('ERROR - FUCKIN ERRS!')
